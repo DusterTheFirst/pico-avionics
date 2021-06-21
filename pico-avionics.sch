@@ -505,7 +505,7 @@ U 1 1 606D194C
 P 4350 1200
 F 0 "#BZ1" V 4750 1350 50  0000 R CNN
 F 1 "Alarm Buzzer" V 4650 1350 50  0000 R CNN
-F 2 "slider:CE-C75-Piezo-Alarm" V 4325 1300 50  0001 C CNN
+F 2 "sparkfun:CE-C75-Piezo-Alarm" V 4325 1300 50  0001 C CNN
 F 3 "http://cdn.sparkfun.com/datasheets/Components/General/CE-C75.pdf" V 4325 1300 50  0001 C CNN
 F 4 " COM-13940" V 4550 1400 50  0000 R CNN "Field4"
 	1    4350 1200
@@ -1621,10 +1621,6 @@ Wire Wire Line
 	8300 7100 9750 7100
 Wire Wire Line
 	6850 7100 8300 7100
-Wire Bus Line
-	11500 1000 11500 4650
-Wire Bus Line
-	13800 1000 13800 4650
 Wire Wire Line
 	6850 5100 7600 5100
 Wire Wire Line
@@ -1666,4 +1662,8 @@ F 3 "~" H 10100 5000 50  0001 C CNN
 	1    10100 5000
 	-1   0    0    -1  
 $EndComp
+Wire Bus Line
+	13800 1000 13800 4650
+Wire Bus Line
+	11500 1000 11500 4650
 $EndSCHEMATC

@@ -223,7 +223,7 @@ Wire Wire Line
 	2500 4550 1900 4550
 Connection ~ 1900 4550
 Text GLabel 2550 4850 2    50   Output ~ 0
-V_BAT_Sense
+V_BAT
 Wire Wire Line
 	2500 4850 2550 4850
 Connection ~ 2500 4850
@@ -253,9 +253,7 @@ NoConn ~ 9000 5400
 Text GLabel 7600 6300 0    50   Output ~ 0
 PWM_Servo_Z
 Text GLabel 9000 5500 2    50   Input ~ 0
-V_BAT_Sense
-Wire Wire Line
-	9000 5700 9150 5700
+V_BAT
 $Comp
 L power:+3.3V #PWR023
 U 1 1 6071506B
@@ -1577,17 +1575,6 @@ Wire Wire Line
 	9850 5100 9900 5100
 Text Notes 9800 5850 0    50   ~ 0
 ADC Connections:\n3: (Internal) Temperature Sensor\n2: Battery voltage divider\n1: Ground reference\n0:
-$Comp
-L Device:Net-Tie_2 NT1
-U 1 1 608A8144
-P 9250 5700
-F 0 "NT1" H 9300 5650 50  0000 C CNN
-F 1 "ADC Ground Reference" H 9200 5750 31  0000 C CNN
-F 2 "NetTie:NetTie-2_SMD_Pad0.5mm" H 9250 5700 50  0001 C CNN
-F 3 "~" H 9250 5700 50  0001 C CNN
-	1    9250 5700
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	9750 7100 9750 6600
 Connection ~ 9750 6600
@@ -1601,8 +1588,6 @@ Wire Wire Line
 Wire Wire Line
 	9750 5700 9750 6100
 Connection ~ 9750 5700
-Wire Wire Line
-	9350 5700 9750 5700
 Wire Wire Line
 	9750 5100 9750 5600
 Wire Wire Line
@@ -1662,6 +1647,23 @@ F 3 "~" H 10100 5000 50  0001 C CNN
 	1    10100 5000
 	-1   0    0    -1  
 $EndComp
+Text Label 9000 5700 0    50   ~ 0
+GND_REF
+Wire Wire Line
+	9650 5700 9750 5700
+$Comp
+L Device:Net-Tie_2 NT1
+U 1 1 608A8144
+P 9550 5700
+F 0 "NT1" H 9550 5750 50  0000 C CNN
+F 1 "ADC Ground Reference" H 9500 5750 31  0001 C CNN
+F 2 "NetTie:NetTie-2_SMD_Pad0.5mm" H 9550 5700 50  0001 C CNN
+F 3 "~" H 9550 5700 50  0001 C CNN
+	1    9550 5700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9000 5700 9450 5700
 Wire Bus Line
 	13800 1000 13800 4650
 Wire Bus Line
